@@ -1,0 +1,60 @@
+#MAILTO="zulfikarb@spc.int,sachindras@spc.int"
+
+#update reynolds data
+@daily root /srv/map-portal/usr/local/bin/update-data reynolds
+0 8 * * * root /srv/map-portal/usr/local/bin/update-data reynolds
+0 18 * * * root /srv/map-portal/usr/local/bin/update-data reynolds
+
+ 
+#update ersst data
+@daily root /srv/map-portal/usr/local/bin/update-data ersst
+ 
+#update sea level data
+0 0 5 * * root /srv/map-portal/usr/local/bin/update-data sealevel
+0 0 10 * * root /srv/map-portal/usr/local/bin/update-data sealevel
+ 
+#calculate deciles for reynolds data
+###########################################
+#Commented out because of missing data, 
+#should turn on both once the missing data 
+#is uploaded
+###########################################
+0 3 4 * * root /srv/map-portal/usr/local/bin/update-data decile
+0 3 18 * * root /srv/map-portal/usr/local/bin/update-data decile
+ 
+#update ww3 forecast data
+0 11 * * * root /srv/map-portal/usr/local/bin/update-data ww3
+0 18 * * * root /srv/map-portal/usr/local/bin/update-data ww3
+ 
+#chlorophyll data
+###########################################
+#data downloading is fine
+#map plotting has an issue
+#keep the data downloading going in the meantime
+###########################################
+0 1 * * * root /srv/map-portal/usr/local/bin/update-data chloro daily
+0 2 * * * root /srv/map-portal/usr/local/bin/update-data chloro monthly
+ 
+#poama
+0 3 * * * root /srv/map-portal/usr/local/bin/update-data poamasla
+0 3 * * * root /srv/map-portal/usr/local/bin/update-data poamassta
+ 
+#coral
+@daily root /srv/map-portal/usr/local/bin/update-data coral
+0 6 * * * root /srv/map-portal/usr/local/bin/update-data coral
+0 12 * * * root /srv/map-portal/usr/local/bin/update-data coral
+0 18 * * * root /srv/map-portal/usr/local/bin/update-data coral
+@daily root /srv/map-portal/usr/local/bin/update-data coral_ol
+ 
+#current
+30 0 * * * root /srv/map-portal/usr/local/bin/update-data currents
+10 5 * * * root /srv/map-portal/usr/local/bin/update-data currents
+ 
+#download mur and process fronts
+0 14 * * * root /srv/map-portal/usr/local/bin/update-data mur
+ 
+#Near real time sea level
+@daily root /srv/map-portal/usr/local/bin/update-data msla
+0 12 * * * root /srv/map-portal/usr/local/bin/update-data msla
+
+

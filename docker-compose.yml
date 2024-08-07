@@ -1,0 +1,16 @@
+version: "3"
+services:
+  ocean-portal-prod:
+    restart: unless-stopped
+    container_name: ocean-portal-prod
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    hostname: tucson
+    working_dir: /git
+    ports:
+      - "86:80"
+    volumes:
+      - /home/pop/data:/data
+      - /home/pop/data/raster:/srv/raster
+

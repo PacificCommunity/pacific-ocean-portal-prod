@@ -1,0 +1,7 @@
+/*
+ * (c) 2023 Pacific Community
+ * Geoscience Energy and Maritime Division, COSPPac COMP
+ * All Rights Reserved
+ */
+
+#regionPanel{margin-top:2px}#mapControls{margin:-1px;padding:2px}#mapControls .layersDiv{padding:3px}#mapControls .layersDiv .labelSpan{padding-left:3px}#mapControlsToolbar{position:absolute;top:24px;right:6px!important}.dataLbl,.dataLayersDiv,.baseLbl{display:none}.version{position:absolute;bottom:0;left:0;font-size:8pt;padding:1px;margin:0}form{width:100%}optgroup{font-style:normal;padding:1px}optgroup option{padding-left:10px}.controlgroup{width:100%;margin-top:5px;margin-bottom:5px;padding-bottom:0}.controlgroup .hint{font-size:smaller;padding:3px}.controlvar{width:100%}.controlvar .label,.controlvar label{display:inline-block;text-align:right;white-space:nowrap;width:100px;padding-right:3px;color:#222}.datepick-popup{z-index:1050!important}input[disabled]+label{color:#ccc}
